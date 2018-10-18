@@ -1,0 +1,29 @@
+enabled: true
+folders:
+  - pages
+  - themes
+  - plugins
+  - config
+  - data
+sync:
+  on_save: true
+  on_delete: true
+  on_media: true
+  cron_enable: false
+  cron_at: '0 12,23 * * *'
+repository: 'https://github.com/STnetwork/git-grav'
+user: STnetwork
+password: gitsync-def502000375dff92a84365c02d50af3edcbb5e38510e208dab9d3c95ac6337ddf172f88213187b4d63575f45de211a0a7426fbdba016d38acb23604c6361249990049977b0157295fdf9480ad12e29e4a52a43fb397e7e0522a3c9756dd9655652fcf
+webhook: /_git-sync-70abf9780171
+webhook_enabled: '0'
+webhook_secret: 2ca192869c00923daee848bbb6ac633e8ab8318db3543a27
+branch: master
+remote:
+  name: origin
+  branch: master
+git:
+  author: gituser
+  name: GitSync
+  email: git-sync@trilby.media
+  bin: git
+logging: false

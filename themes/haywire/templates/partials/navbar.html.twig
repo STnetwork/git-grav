@@ -1,0 +1,63 @@
+<navbar inline-template>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container is-fluid">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{{ base_url == '' ? '/' : base_url }}">
+                    {{ config.site.title }}
+                </a>
+
+                <a class="navbar-item" href="https://github.com/STnetwork" target="_blank" rel="noopener" title="Github">
+                                <b-icon pack="fa" icon="github"></b-icon>
+                </a>
+
+                <a class="navbar-item" href="https://hatscripts.com/addskype/?stnetwork.fr" target="_blank" rel="noopener" title="Skype">
+                                <b-icon pack="fa" icon="skype"></b-icon>
+                </a>
+
+                <a class="navbar-item" href="https://fr.linkedin.com/in/sofiane-touchani-91921683" target="_blank" rel="noopener" title="LinkedIn">
+                                <b-icon pack="fa" icon="linkedin"></b-icon>
+                </a>
+
+                <button class="button navbar-burger" :class="{'is-active': navIsActive}" @click.prevent="toggleNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="navbar-menu" :class="{'is-active': navIsActive}">
+                {% block header_navigation %}
+                    {% include 'partials/navigation.html.twig' %}
+                {% endblock %}
+            </div>
+        </div>
+    </nav>
+</navbar>
+
+<div class="bd-patreon">
+  <a class="bd-patreon-button" href="https://www.patreon.com/jgthms" target="_blank">
+    <img src="/images/patreon.png" alt="Become a patron">
+  </a>
+</div>
+
+<section class="hero is-dark is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            STnetwork
+          </p>
+          <p class="subtitle">
+            Systems <strong>&</strong> Networks
+          </p>
+        </div>
+        <div class="column is-narrow">
+          <div id="carboncontainer">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

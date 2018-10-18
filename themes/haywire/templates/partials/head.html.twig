@@ -1,0 +1,18 @@
+<meta charset="utf-8" />
+<title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+{% include 'partials/metadata.html.twig' %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<meta data-n-head="true" content="yes" name="mobile-web-app-capable">
+<meta data-n-head="true" content="default" name="apple-mobile-web-app-status-bar-style">
+<meta data-n-head="true" content="#ffffff" name="theme-color">
+<link rel="icon" type="image/png" href="/user/themes/haywire/assets/img/icon_48.png"/>
+<link href="/manifest.ebe57820.json" rel="manifest" data-n-head="true">
+<link rel="canonical" href="{{ page.url(true, true) }}" />{{ assets.css() }}
+
+
+<script>
+    var shiftWindow = function() { scrollBy(0, -50) };
+    window.addEventListener("hashchange", shiftWindow);
+    function load() { if (window.location.hash) setTimeout(shiftWindow, 1); }
+	window.addEventListener("hashchange", shiftWindow);
+</script>
